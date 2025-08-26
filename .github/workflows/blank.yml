@@ -23,7 +23,6 @@ jobs:
           # --- Enable & Configure Plugins ---
           plugin_achievements: yes
           plugin_languages: yes
-          plugin_activity: yes
           plugin_isocalendar: yes  # Enable the isometric calendar plugin
           plugin_isocalendar_duration: full-year  # Set to full year view
 
@@ -31,15 +30,7 @@ jobs:
           base: header, isocalendar, achievements, languages
 
           # --- Optional: Plugin Customization Examples ---
-          # For the 'languages' plugin: Limit to top 8 languages
-          languages_limit: 8
-          # For the 'achievements' plugin: Only show achievements above a 'C' threshold
-          achievements_threshold: C
-          # For the 'activity' plugin: Show the last 14 days of activity
-          activity_days: 14
-          activity_filter: all
-          activity_visibility: all
-
+          
           # --- File Output ---
           # This will generate a file named 'metrics.svg' in a folder called 'github-metrics'
           filename: github-metrics/metrics.svg
