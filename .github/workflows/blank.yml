@@ -23,12 +23,18 @@ jobs:
           # --- Control the overall layout/sections ---
           base: header, activity, community, repositories
 
-         # --- Enable & Configure Plugins ---
+          # --- Enable & Configure Plugins ---
+          plugin_achievements: yes
+          plugin_achievements_only: >-
+            polyglot, stargazer, sponsor, deployer, member, maintainer, developer,
+            scripter, packager, explorer, infographile, manager
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: X
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
 
-          config_order: base.header, base.activity+community, base.repositories, isocalendar, languages
+          config_order: base.header, base.activity, base.community, base.repositories, isocalendar, languages
         
           
           filename: github-metrics/metrics.svg
