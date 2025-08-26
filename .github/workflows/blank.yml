@@ -21,7 +21,7 @@ jobs:
           user: ${{ github.repository_owner }} # Uses the owner of the repo (you)
 
           # --- Control the overall layout/sections ---
-          base: header, activity, community, repositories, metadata
+          base: header, activity, community, repositories
 
          # --- Enable & Configure Plugins ---
           plugin_achievements: yes
