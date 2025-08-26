@@ -9,13 +9,37 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: production
     permissions:
       contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          # --- Essential Settings ---
           token: ${{ secrets.METRICS_TOKEN }}
-          plugin: achievements, languages, activity
-          base: header, activity
+          user: ${{ github.repository_owner }} # Uses the owner of the repo (you)
+
+          # --- Enable & Configure Plugins ---
+          plugin_achievements: yes
+          plugin_languages: yes
+          plugin_activity: yes
+
+          # --- Control the overall layout/sections ---
+          base: header, activity, achievements, languages
+
+          # --- Optional: Plugin Customization Examples ---
+          # For the 'languages' plugin: Limit to top 8 languages
+          languages_limit: 8
+          # For the 'achievements' plugin: Only show achievements above a 'C' threshold
+          achievements_threshold: C
+          # For the 'activity' plugin: Show the last 14 days of activity
+          activity_days: 14
+          activity_filter: all
+          activity_visibility: all
+
+          # --- File Output ---
+          # This will generate a file named 'metrics.svg' in a folder called 'github-metrics'
+          filename: github-metrics/metrics.svg
+          # This ensures the SVG is committed to your main branch
+          output: readme
