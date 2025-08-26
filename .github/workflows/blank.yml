@@ -25,10 +25,10 @@ jobs:
 
          # --- Enable & Configure Plugins ---
           plugin_achievements: yes
-          plugin_languages: yes
+          
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
+          plugin_languages: yes
           
           # --- File Output ---
           # This will generate a file named 'metrics.svg' in a folder called 'github-metrics'
