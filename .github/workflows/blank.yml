@@ -20,16 +20,15 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: ${{ github.repository_owner }} # Uses the owner of the repo (you)
 
-          # --- Enable & Configure Plugins ---
+          # --- Control the overall layout/sections ---
+          base: header, activity, community, repositories, metadata
+
+         # --- Enable & Configure Plugins ---
           plugin_achievements: yes
           plugin_languages: yes
-          plugin_isocalendar: yes  # Enable the isometric calendar plugin
-          plugin_isocalendar_duration: full-year  # Set to full year view
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
 
-          # --- Control the overall layout/sections ---
-          base: header, isocalendar, achievements, languages
-
-          # --- Optional: Plugin Customization Examples ---
           
           # --- File Output ---
           # This will generate a file named 'metrics.svg' in a folder called 'github-metrics'
