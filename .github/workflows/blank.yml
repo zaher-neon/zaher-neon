@@ -34,7 +34,7 @@ jobs:
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
 
-          config_order: base.header, base.activity, base.community, base.repositories, isocalendar, languages
+          config_order: base.header, base.activity+community, base.repositories, isocalendar, languages
         
           
           filename: github-metrics/metrics.svg
