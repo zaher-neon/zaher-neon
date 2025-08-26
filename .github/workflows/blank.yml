@@ -24,12 +24,11 @@ jobs:
           base: header, activity, community, repositories, isocalendar, languages
 
          # --- Enable & Configure Plugins ---
-          plugin_achievements: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
 
-          config_order: base.header, isocalendar, languages,
+          config_order: base.header, isocalendar, languages
         
           # --- File Output ---
           # This will generate a file named 'metrics.svg' in a folder called 'github-metrics'
